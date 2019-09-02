@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <h1 class="text-center">Your answer</h1>
+
+  <div class="d-flex justify-content-center mt-5">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Stupid Coach</h5>
+        <h6 class="card-subtitle mb-2 text-muted"><%= @question %></h6>
+        <p class="card-text">
+          <% if @question == "I am going to work" %>
+            <%= "Great" %>
+          <% elsif @question[-1] == "?" %>
+            <%= "Silly question, get dressed and go to work!" %>
+          <% else %>
+            <%= "I don't care, get dressed and go to work!" %>
+          <% end  %>
+        </p>
+        <%= link_to "Add a new question", ask_path, class: "card-link" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
